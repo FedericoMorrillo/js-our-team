@@ -5,3 +5,13 @@
     box-sizing: border-box;
 }
 /*reset*/
+h1{
+    text-align:center ;
+    margin: 10px 0;
+}
+.container{
+    margin: 0 auto;
+}
+.utente{
+    margin:20px
+}

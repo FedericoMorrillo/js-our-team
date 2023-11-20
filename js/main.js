@@ -1,4 +1,27 @@
 "use strict";
+//funzioni
+ function datiTeam (){
+//ciclo
+for (let i = 0; i < team.length; i++) {
+    let utente = team[i];
+    let utentecontainer = document.createElement("div");
+    utentecontainer.classList.add("utente")
+    //console.log(team[i]);
+  
+    //ciclo key
+    for (let key in utente) {
+  
+      //creiamo un paragrafo
+      let info = document.createElement("p");
+      info.textContent = `${key}: ${utente[key]}`;
+      utentecontainer.append(info);
+      teamContainer.append(utentecontainer);
+      console.log(`${key}: ${utente[key]}`);
+    }
+    console.log("**********************************");
+  }
+  
+ }
 
 //dichiarazione oggetti in un array
 const team = [
@@ -34,12 +57,8 @@ const team = [
   },
 ];
 
+// dichiariamo il container per i dati
+const teamContainer = document.querySelector(".container");
 
-for(let i=0; i<team.length; i++){
-    const utente = team[i];
-    //console.log(team[i]);
-    for(let key in utente){
-        console.log(`${key}: ${utente[key]}`);
-    }
-     console.log("**********************************")
-}
+datiTeam();
+
